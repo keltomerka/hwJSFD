@@ -95,5 +95,3 @@ for(let w=0; w<5; w++){
     document.write('* &nbsp ')
 }
 
-
-
