@@ -66,18 +66,34 @@ for(let a=0; a<4;a++){
 document.write('<br>' + '<hr>')
 
 // Порожній квадрат
-
-for(let a = 0; a < 10; a++){
-    
-    for(let a = 0; a < 4; a++){
-        document.write('2')
+for(let q=0; q<5; q++){
+    document.write('* &nbsp ')
+}
+for(let a = 0; a < 3; a++){
+    document.write('<br>')
+    document.write(' * ')
+    for(let b=0; b < 1; b++){
         
-    }
-    document.write('1')
+        document.write(' &nbsp ')
+        
+        for(let c=0; c < 1; c++){
+            document.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+            for(let d=0; d < 1 ; d++){
+                document.write(' &nbsp; ') 
+            }
+            for(let e=0; e < 1 ; e++){
+                
+                document.write(' * ')
+                
+            }
+        }
+    } 
+    
 }
 document.write('<br>')
-
-for(let a = 0; a < 9; a++){
-    document.write('3')
-    
+for(let w=0; w<5; w++){
+    document.write('* &nbsp ')
 }
+
+
+
