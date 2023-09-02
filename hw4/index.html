@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            margin-top: 30px;
+            display: flex;
+            height: 300px;
+            width: 700px;
+            border: 1px solid black;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #div-img{
+            box-sizing: border-box;
+        }
+        #div-img img{
+            max-height: 250px;
+            max-width: auto;
+            padding: 0 10px;
+            
+        }
+        #info{
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            font-size: 20px;
+            color: black;
+        }
+        button{
+            margin-top: 50px;
+            margin-left: 50px;
+            height: 40px;
+            width: 220px;
+            background-color: rgb(52, 171, 193);
+            border: none;
+            color: aliceblue;
+            font-size: 16px;
+            transition: all, 1.5s;
+        }
+        button:hover{
+            background-color: #8A77FF;
+            color: black;
+            border-radius: 70px;
+        }
+        #info a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn"><strong>Додати користувача</strong></button>
+    <section id="container">
+        <div id="div-img">
+             
+        </div>
+        <div id="info">
+        </div>
+    </section>
+
+    <script>
+        const addUser = document.getElementById("btn");
+        const info = document.getElementById("info");
+        const addImg = document.getElementById("div-img");
+        let userInfo;
+        addUser.onclick = function(){
+            userImg = prompt("Введіть посилання на картинку");
+            userImg = userImg.split(" ");
+            if (userImg.length !== 1){
+                alert("Невірно введено посилання")
+                return
+            };
+            const img = `
+            <img src="${userImg}" alt=""> 
+            `;
+            addImg.innerHTML = img;
+            
+            userInfo = prompt("Введіть свої дані у вигляді", "Ім'я Призвіще Телефон Пошта");
+            userInfo = userInfo.split(" ");
+            if (userInfo.length !== 4){
+                alert("Невірно введено інформацію")
+                return
+            };
+            const div = `
+            <div>Ім'я: ${userInfo[0]}</div>
+            <div>Призвіще: ${userInfo[1]}</div>
+            <a href="tel:+380441234567">Телефон: ${userInfo[2]}</a>
+            <a href="mailto:example@gmail.com">Пошта: ${userInfo[3]}</a>
+            `;         
+            info.innerHTML = div;
+            
+        }
+     
+        
+    </script>
+</body>
+</html>
