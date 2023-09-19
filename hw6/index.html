@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+            function Human(name, age, sex){
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+        } 
+        let ivan = new Human("Ivan",23, "man")
+        let yana = new Human("Yana",50, "woman")
+        let oleg = new Human("Oleg",16, "man")
+
+        let people = [ivan, yana, oleg]
+
+        function ageSort(people){
+            return people.sort((x, y) => x.age - y.age)
+        } 
+        const sorted = ageSort(people)
+        console.log(sorted);
+    </script>
+</body>
+</html>
