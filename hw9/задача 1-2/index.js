@@ -24,7 +24,7 @@ console.log(style.margin);
  const check = /\d\d\d-\d\d\d-\d\d-\d\d/;
  const divError = document.getElementById('error')
 btn.onclick = function(){
-    if(check.test(input.value)){
+    if(check.test(input.value) && input.value.length === 13){
         document.body.style.background = 'green';
         document.location = "https://risovach.ru/upload/2013/03/mem/toni-stark_13447470_big_.jpeg"
     }
