@@ -33,3 +33,7 @@ function createNavigationMenu (menu = {}) {
 
     nav.append(...navElement)
 }
+
+function people (){
+    
+}

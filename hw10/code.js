@@ -59,7 +59,7 @@ const action = function(){
             res = parseInt(firstNumber) / parseInt(secondNumber);
         }
         display.value = res;
-        secondNumber = '';
+        
     }
     
 };
