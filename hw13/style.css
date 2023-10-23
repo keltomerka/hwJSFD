@@ -390,3 +390,7 @@ footer > form > div > p {
         text-align: center;
     }
 }
+.plus-minus{
+    width: 20px;
+    height: 20px;
+}

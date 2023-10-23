@@ -59,15 +59,16 @@ function show(pizza) {
     const price = document.getElementById("price");
     const sauces = document.getElementById("sauces");
     const topping = document.getElementById("topping");
-
+    const sousesCount = {}
     const sauceEl = pizza.pizzaSause.map((e) => {
         const div = document.createElement("div");
         div.innerText = e.name;
         return div
-    })
+     }
+
     sauces.innerHTML = "";
     sauces.append(...sauceEl)
-
+ 
     const toppingEl = pizza.pizzaTopping.map((e) => {
         const div = document.createElement("div");
         div.innerText = e.name;
@@ -160,6 +161,11 @@ show(pizza)
 const banner = document.getElementById("banner")
 banner.addEventListener("mouseover", () =>{
     banner.classList.add("banner-not-position")
-    
+    let x = Math.floor(Math.random() * (window.innerWidth - banner.offsetWidth));
+    let y = Math.floor(Math.random() * (window.innerHeight - banner.offsetHeight));
+
+    banner.style.bottom = x + "px";
+    banner.style.right = y + "px";
     
 })
+
